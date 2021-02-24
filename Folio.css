@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans',sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+padding: 0 100px 0 100px;
+}
+
+nav ul,
+.main-info-section,
+.work-category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body{
+background-color: black;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.navbar{
+    background-color: #181818;
+}
+
+header h1,
+header a,
+.text p,
+.about h1,
+.skills h1,
+.work h1,
+.contact h1{
+    color: yellowgreen;
+}
+
+li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+a{
+    text-decoration: none;
+    font-size: .9rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+
+.main-info-section{
+    height: calc(100vh - 81.6px);
+}
+
+.text{
+    margin-top: 120px;
+}
+
+.text h1{
+    color: #fff;
+    font-size: 3rem;
+    cursor: context-menu;
+}
+
+.text span{
+    display: inline-block;
+}
+
+span:hover{
+    color: #095fd1 ;
+    transition: all .5s;
+}
+
+span.name{
+    color: yellowgreen;
+}
+
+span.m-left{
+    margin-left: -10px;
+}
+
+.text p{
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-size: .8rem;
+}
+
+.text a{
+    padding: 12px 25px;
+    background-color: none;
+    border: 3px solid yellowgreen;
+    color: yellowgreen;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    transition: .5s;
+    display: inline-block;
+}
+
+.text a:hover{
+    color: #095fd1;
+}
+
+.text a::before{
+    background-color: yellowgreen;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.text a:hover::before{
+    height: 100%;
+}
+
+.profile-image img{
+    width: 500px;
+    margin-top: 50px;
+    height: 550px;
+    border-radius: 19px;
+}
+
+.about{
+    height: 100vh;
+    margin-top: 100px;
+}
+
+.about h1,
+.work h1{
+    font-size: 10rem;
+    z-index: 0;
+    opacity: .1;
+}
+
+.about-me-info{
+    max-width: 750px;
+    background-color: #252627;
+    color: yellowgreen;
+    border-radius: 0 0 20px 0;
+    box-shadow: 0 0 1.2rem rgba(0,0,0,.25);
+    padding: 50px;
+    font-size: 1.24rem;
+    position: relative;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.about-me-info p{
+    font-size: 1.3rem;
+    color: yellowgreen;
+}
+
+a.about-me-info p:nth-child(2),
+a.about-me-info p:last-child{
+    margin-top: 30px;
+}
+
+.about img{
+    width: 500px;
+    height: 350px;
+    position: relative;
+    top: -300px;
+    left: calc(100% - 100px);
+    right: calc(100% - 100px);
+    transform: translateX(calc(-100% + 100px));
+}
+
+.skills{
+    height: 100vh;
+}
+
+.skills h1,
+.contact h1{
+    text-align: right;
+    font-size: 10rem;
+    opacity: .1;
+}
+
+.skills-info{
+    font-size: 1.4rem;
+    color: yellowgreen;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.html{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+div[class^='tag-']{
+    clip-path: polygon(75% 0%,100% 50%,75% 100%,0% 100%,0% 50%,0% 0%);
+    width: 120px;
+    height: 30px;
+    background-color: yellowgreen;
+    margin-right: 30px;
+}
+
+div[class^='tag-'] p{
+    color: whitesmoke;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.1rem;
+    padding-top: 3px;
+}
+
+.progressbar{
+    position: relative;
+    width: 600px;
+    height: 20px;
+    border: 2px solid yellowgreen;
+    border-radius: 0 20px 20px 0;
+    margin-top: 7px;
+}
+
+div[class^='bar-']{
+    position: absolute;
+    background-color: yellowgreen;
+    height: 10px;
+    border-radius: 20px;
+    margin: 2.7px;
+}
+
+.bar-html,
+.bar-css,
+.bar-javascript,
+.bar-react{
+    width: calc(0 - 6px);
+}
+
+.work-category button{
+    text-transform: capitalize;
+    border: 3px solid yellowgreen;
+    padding: 15px 30px 25px 35px;
+    border-radius: 1px;
+    color: yellowgreen;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+    background-color: black;
+    outline: none;
+    cursor: pointer;
+}
+
+div[class^='category-']{
+    margin-top: 50px;
+    /*display: grid;*/
+    grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+    grid-gap: 30px;
+}
+
+.work a{
+    justify-self: center;
+    position: relative;
+    display: inline-block;
+}
+
+.work-category .active{
+    background-color: black;
+    color: yellowgreen;
+    height: 37px;
+}
+
+.work-category button:hover{
+    color: #095fd1;
+}
+
+button.active{
+    color: #f2f2f2;
+}
+
+.work a img{
+    width: 350px;
+    justify-self: center;
+}
+
+div.hideCategory{
+    display: none;
+}
+
+.showCategory{
+    display: block;
+}
+
+.container.contact{
+    margin-top: 50px;
+}
+
+#contact.submit{
+    color: yellowgreen;
+    background-color: black;
+}
+
+form input,
+form textarea{
+    display: block;
+    width: 500px;
+    padding: 20px;
+    background-color: inherit;
+    border: 1px solid yellowgreen;
+    margin: 20px 0;
+    outline: none;
+    font-size: 1.2rem;
+    color: yellowgreen;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform:translateX(-50%);
+}
+
+form input:last-child{
+    width: 150px;
+    background-color: lawngreen;
+    border: none;
+    cursor: pointer;
+}
+
+footer hr{
+    border: .2px solid yellowgreen;
+    margin-top: 80px;
+}
+
+footer p{
+    text-align: center;
+    color: yellowgreen;
+    font-family: 1.2rem;
+    padding: 30px;
+}
